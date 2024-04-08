@@ -1,0 +1,23 @@
+<div class="bin-area">
+    <div class="bin-wrapper">
+        <div class="bin-capacity">
+            @if (full) {
+                <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="8" cx="8" cy="8" fill="red" />
+                </svg>
+            } @else {
+                <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <circle r="8" cx="8" cy="8" fill="green" />
+                </svg>
+            }
+        </div>
+        <div class="bin-location">
+            <pre>{{ location }}</pre>
+        </div>
+        <div class="bin-info">
+            <pre>Status: @if (full) {Full} @else {Available}</pre>
+            <pre>ID: {{ id }}</pre>
+            <pre>Items recycled today: {{ recycled }}</pre>
+        </div>
+    </div>
+</div>

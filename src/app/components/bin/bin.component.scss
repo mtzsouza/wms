@@ -1,0 +1,45 @@
+@import "../../../styles.scss";
+
+// Mobile-first approach
+.bin-area {
+    width: 80vw;
+    height: 30vh;
+    border-radius: 4px;
+    background-color: $black;
+    color: white;
+
+    .bin-wrapper {
+        position: relative;
+        padding: 24px;
+
+        .bin-capacity {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+
+        .bin-location {
+            transform: translateY(-100%);
+            width: 100%;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+        }
+    }
+}
+
+// Desktop Adaptation
+@media only screen and (min-width: 768px) {
+    .bin-area {
+        width: 350px;
+        height: 250px;
+
+        .bin-location {
+            font-size: x-large !important;
+        }
+
+        .bin-info {
+            font-size: large;
+        }
+    }
+}
