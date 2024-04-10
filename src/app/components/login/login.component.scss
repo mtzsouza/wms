@@ -58,6 +58,17 @@
             font-size: large;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             letter-spacing: 2px;
+            cursor: pointer;
+            transition-duration: 800ms;
+
+                &:hover {
+                    transition-duration: 400ms;
+                    opacity: 80%;
+                }
+
+                &:not:hover {
+                    opacity: 100%;
+                }
         }
     }
 
