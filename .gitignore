@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Exclude environments
-src/environments
+.src/environments
