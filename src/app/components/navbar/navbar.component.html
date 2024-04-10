@@ -1,13 +1,27 @@
 <div class="nav-area">
     <div class="nav-wrapper">
-        <a href="/" class="nav-points">
-            
-        </a>
+        <div class="nav-placeholder">
+            <!-- Just to hold the navbar in its place -->
+        </div>
         <a href="/" class="nav-logo" >
             <img src="assets/aegis-logo.svg" alt="aegis logo">
         </a>
-        <a href="/register" class="nav-button">
-            Sign up
-        </a>
+        <div class="nav-buttons-area">
+            @if (isLoggedIn()) {
+                <button type="button" (click)="logout()" class="nav-button nav-login-button">
+                    Logout
+                </button>
+                <a href="/account" class="nav-button nav-register-button">
+                    Profile
+                </a>
+            } @else {
+                <a href="/login" class="nav-button nav-login-button">
+                    Log in
+                </a>
+                <a href="/register" class="nav-button nav-register-button">
+                    Sign up
+                </a>
+            }
+        </div>
     </div>
 </div>

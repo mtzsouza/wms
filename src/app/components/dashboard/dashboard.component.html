@@ -1,8 +1,12 @@
 <app-navbar></app-navbar>
-<div class="db-area">
+<div class="body-area">
     <div class="db-wrapper">
         <div class="db-presentation">
-            <h1 class="title">Discover a new way to recycle & earn rewards</h1>
+            @if (isLoggedIn()) {
+                <h1 class="title">You have ## points. <br> Claim them!</h1>
+            } @else {
+                <h1 class="title">Discover a new way to recycle & earn rewards</h1>
+            }
         </div>
         <div class="db-list">
             <div class="db-list-bin" *ngFor="let bin of bins">

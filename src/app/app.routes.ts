@@ -9,6 +9,6 @@ const redirectLoggedInToDashboard = () => redirectLoggedInTo(['']);
 
 export const routes: Routes = [
     { path: '', component: DashboardComponent},
-    { path: 'login', component: LoginComponent, ...canActivate(redirectLoggedInToDashboard) },
+    { path: 'login', component: LoginComponent, ...canActivate(redirectLoggedInToDashboard)},
     { path: 'register', component: RegisterComponent, ...canActivate(redirectLoggedInToDashboard)},
 ];

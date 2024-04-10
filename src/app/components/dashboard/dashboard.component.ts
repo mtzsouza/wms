@@ -1,7 +1,8 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { BinComponent } from '../bin/bin.component';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,6 +12,8 @@ import { BinComponent } from '../bin/bin.component';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
+  authService = inject(AuthService)
+
   bins = [
     {
         "id": 32143,
@@ -47,4 +50,12 @@ export class DashboardComponent {
         "recycled": 3
     }
   ];
+
+  isLoggedIn() : boolean {
+    if (this.authService.currentUserSig()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
